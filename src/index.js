@@ -4,6 +4,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 // import Single from './templates/single';
 // import Archive from './templates/Archive';
 // import Notfound from './templates/Notfound';
+import About from './pages/About';
 import './styles/index.scss';
 import App from './App';
 
@@ -12,6 +13,7 @@ ReactDOM.render(
 		<Switch>
 			{/* <Route path='/' copmonnet={App}/> */}
 			<Route exact path='/' component={App} />
+			<Route exact path='/About' component={About} />
 			{/* <Route path='/post/:slug' component={Single} />
 			<Route path='/page/:slug' component={Single} />
 			<Route path='/search/:term' component={Archive} />
