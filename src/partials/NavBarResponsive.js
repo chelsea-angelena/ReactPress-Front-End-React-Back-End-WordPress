@@ -16,7 +16,14 @@ const NavBarReact = (props) => {
 	const toggle = () => setIsOpen(!isOpen);
 
 	return (
-		<Navbar className='nav' dark fixed color='grey-dark' expand='md'>
+		<Navbar
+			className='nav'
+			dark
+			fixed='true'
+			fluid='true'
+			color='grey-dark'
+			expand='md'
+		>
 			<NavbarBrand href='/'>Blog</NavbarBrand>
 			<NavbarToggler onClick={toggle} />
 			<Collapse isOpen={isOpen} navbar>
@@ -27,13 +34,18 @@ const NavBarReact = (props) => {
 						</NavLink>
 					</NavItem>
 					<NavItem>
-						<NavLink className='nav__item' href='/about'>
-							About
+						<NavLink className='nav__item' href='/posts'>
+							Post
 						</NavLink>
 					</NavItem>
 					<NavItem>
 						<NavLink className='nav__item' href='/contact'>
 							Contact
+						</NavLink>
+					</NavItem>
+					<NavItem>
+						<NavLink className='nav__item' href='/gallery'>
+							Gallery
 						</NavLink>
 					</NavItem>
 				</Nav>

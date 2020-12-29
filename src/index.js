@@ -1,23 +1,36 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-// import Single from './templates/single';
-// import Archive from './templates/Archive';
-// import Notfound from './templates/Notfound';
-import About from './pages/About';
+// import Post from './pages/Post';
+// import Archive from './pages/Archive';
+import Notfound from './pages/Notfound';
+import PostList from './pages/PostList';
+import Gallery from './partials/Gallery';
+import CreatePost from './pages/CreatePost';
+import PostDetails from './pages/PostDetails';
 import './styles/index.scss';
 import App from './App';
+
+// import PostItem from './pages/PostItem';
 
 ReactDOM.render(
 	<BrowserRouter>
 		<Switch>
-			{/* <Route path='/' copmonnet={App}/> */}
-			<Route exact path='/' component={App} />
-			<Route exact path='/About' component={About} />
-			{/* <Route path='/post/:slug' component={Single} />
-			<Route path='/page/:slug' component={Single} />
-			<Route path='/search/:term' component={Archive} />
-			<Route component={Notfound} /> */}
+			<Route exact path='/posts/:slug/:id' component={PostDetails} />
+
+			<Route exact path='/posts' component={PostList} />
+			<Route exact path='/gallery'>
+				<Gallery />
+			</Route>
+			<Route exact path='/newpost'>
+				<CreatePost />
+			</Route>
+			<Route exact path='/'>
+				<App />
+			</Route>
+			<Route path='*'>
+				<Notfound />
+			</Route>
 		</Switch>
 	</BrowserRouter>,
 	document.getElementById('root')

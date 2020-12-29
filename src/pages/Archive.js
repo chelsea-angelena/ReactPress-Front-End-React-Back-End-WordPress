@@ -1,14 +1,14 @@
 import React from 'react';
-import Head from '../partials/Head.js';
-import Foot from '../partials/Foot.js';
-import TheLoop from '../partials/TheLoop';
+import Head from '../partials/layout/Head.js';
+import Foot from '../partials/layout/Foot.js';
+// import TheLoop from '../partials/TheLoop';
 import styled from 'styled-components';
 
 export default function Archive() {
 	return (
 		<View>
-			<Head title='Home Page' />
-			<TheLoop />
+			<Head title='Search Posts' />
+			SearchPosts
 			<Foot />
 		</View>
 	);

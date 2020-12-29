@@ -1,14 +1,19 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
-import Head from './partials/Head';
-import Foot from './partials/Foot';
-import PostList from './partials/PostList';
+import Head from './partials/layout/Head';
+import Foot from './partials/layout/Foot';
+import PostList from './pages/PostList';
+import Intro from './partials/Intro';
+import Layout from './partials/layout/Layout';
 
 function App() {
 	return (
 		<>
 			<Head />
-			<PostList />
+			<Layout>
+				<Intro />
+				<PostList />
+			</Layout>
 			<Foot />
 		</>
 	);

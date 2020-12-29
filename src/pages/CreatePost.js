@@ -1,9 +1,10 @@
 import React, { useState, useRef } from 'react';
 import axios from 'axios';
-
+import Head from '../partials/layout/Head';
+import Foot from '../partials/layout/Foot';
 const baseUrl = '/wp-json/wp/v2/posts';
 
-export default function About({ user }) {
+export default function Post() {
 	const [content, setContent] = useState('');
 	const [image, setImage] = useState(null);
 	const imageInputRef = useRef();
@@ -28,7 +29,8 @@ export default function About({ user }) {
 	};
 
 	return (
-		<>
+		<div>
+			<Head />
 			<div>
 				<h1>Create New Post</h1>
 				<form onSubmit={handleSubmit}>
@@ -55,6 +57,7 @@ export default function About({ user }) {
 					/>
 				)}
 			</div>
-		</>
+			<Foot />
+		</div>
 	);
 }
